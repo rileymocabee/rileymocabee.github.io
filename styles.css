@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600&display=swap');
 
-/* Basic color scheme */
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
@@ -8,11 +7,11 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Archivo', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -20,21 +19,16 @@ body {
   position: relative;
 }
 
-/* Parallax Hero */
 .hero {
   width: 100%;
   height: 100vh;
-  background-color: #333;
-  background:
-    url('images/hero-bg.jpg')
-    center center / cover
-    no-repeat
-    fixed;
-  position: relative;
+  background: url('images/hero-bg.jpg') center center / cover no-repeat fixed;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
+
 .hero::before {
   content: '';
   position: absolute;
@@ -44,27 +38,25 @@ body {
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
 }
 
-/* Adjusted logo size and spacing */
 .hero-logo {
   width: 400px;
   max-width: 90%;
   height: auto;
-  margin-bottom: 20px; /* Increased spacing */
+  margin-bottom: 20px;
 }
 
-/* Subheader */
 .project-subheader {
   font-size: 1.5rem;
   color: #fff;
   margin: 0;
 }
 
-/* Social Icons (Top-Right) */
 .social-links {
   position: absolute;
   top: 20px;
@@ -72,22 +64,25 @@ body {
   display: flex;
   gap: 15px;
 }
+
 .social-links a {
   color: var(--text-color);
   font-size: 24px;
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 40px; 
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none; /* This removes the underline */
 }
+
 .social-links a:hover {
   background-color: var(--accent-color);
   color: #fff;
 }
 
-/* Main Content */
 main {
   flex: 1;
   background-color: #fff;
@@ -96,32 +91,14 @@ main {
   margin: 0 auto;
 }
 
-/* Fade-In on Scroll */
+/* Fade-In Animation */
 .fade-in-on-scroll {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .fade-in-active {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero-logo {
-    width: 300px;
-  }
-  .project-subheader {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-logo {
-    width: 200px;
-  }
-  .project-subheader {
-    font-size: 1rem;
-  }
 }
