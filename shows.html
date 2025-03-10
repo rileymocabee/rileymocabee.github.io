@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Riley Mocabee | Shows</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Styles (Shared) -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Simple Hero for the shows page -->
+  <section class="hero-shows-page fade-in-on-scroll">
+    <div class="hero-content">
+      <h1 class="artist-name">Upcoming Shows</h1>
+      <a class="cta-link secondary" href="index.html">Back to Home</a>
+    </div>
+  </section>
+
+  <!-- Social Icons (Top-Right) -->
+  <div class="social-links fade-in-on-scroll">
+    <a href="https://www.instagram.com/rileymocabee/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@rileymocabee" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.youtube.com/@RileyMocabee" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://music.apple.com/us/album/everything-single/1723399248" target="_blank"><i class="fab fa-apple"></i></a>
+    <a href="https://open.spotify.com/artist/39B7zi8C2AaVzlZ2AJylR4" target="_blank"><i class="fab fa-spotify"></i></a>
+    <a href="https://rileymocabee.bandcamp.com" target="_blank"><i class="fab fa-bandcamp"></i></a>
+  </div>
+
+  <main>
+    <section class="shows-list-section fade-in-on-scroll">
+      <ul class="shows-list" id="shows-list"></ul>
+      <p class="no-shows-msg" id="no-shows-message">
+        No upcoming shows at the moment. Check back soon!
+      </p>
+    </section>
+  </main>
+
+  <!-- Script for dynamic shows + fade-in -->
+  <script src="shows.js"></script>
+</body>
+</html>
