@@ -16,7 +16,7 @@
       <img src="images/logo.png" alt="Beach Runner Logo" class="hero-logo">
       <h2 class="project-subheader">New Project Coming Soon</h2>
 
-      <!-- Enhanced Email Signup -->
+      <!-- Email Signup Form -->
       <form id="emailForm" class="email-form">
         <input type="email" id="email" placeholder="Your Email" required>
         <button type="submit">Join List</button>
@@ -30,13 +30,14 @@
     <a href="https://beachrunner.bandcamp.com" target="_blank"><i class="fab fa-bandcamp"></i></a>
     <a href="https://soundcloud.com/beachrunnersd" target="_blank"><i class="fab fa-soundcloud"></i></a>
     <a href="https://tiktok.com/@beachrunnersd" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@BeachRunnerSD" target="_blank"><i class="fab fa-youtube"></i></a>
   </div>
 
   <main></main>
 
   <script src="script.js"></script>
 
-  <!-- Google Forms submission integration -->
+  <!-- Google Form Email Submission Script -->
   <script>
     document.getElementById('emailForm').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -53,19 +54,15 @@
         body: formData
       })
       .then(() => {
-        alert('Thank you for subscribing!');
+        alert('Thanks for subscribing!');
         document.getElementById('emailForm').reset();
       })
       .catch((error) => {
-        alert('Submission failed, please try again.');
-        console.error(error);
+        console.error('Error:', error);
+        alert('Submission error. Please try again.');
       });
     });
   </script>
-
-  <main></main>
-
-  <script src="script.js"></script>
 
 </body>
 </html>
