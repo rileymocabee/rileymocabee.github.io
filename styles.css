@@ -48,10 +48,10 @@ body {
 }
 
 .hero-logo {
-  width: 400px;
-  max-width: 90%;
+  width: 350px;
+  max-width: 80%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .project-subheader {
@@ -68,9 +68,11 @@ body {
 }
 
 .email-form input[type="email"] {
-  padding: 10px 15px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
   width: 250px;
   max-width: 80%;
   font-size: 16px;
@@ -84,17 +86,16 @@ body {
 
 .email-form button {
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 15px;
   border: none;
   background-color: var(--accent-color);
   color: white;
-  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .email-form button:hover {
-  background-color: #17a44c;
+  background-color: #4b5c7a;
 }
 
 .social-links {
@@ -106,8 +107,8 @@ body {
 }
 
 .social-links a {
-  color: var(--text-color);
-  font-size: 24px;
+  color: #ffffff;
+  font-size: 26px;
   width: 40px; height: 40px;
   border-radius: 50%;
   display: flex;
@@ -135,7 +136,7 @@ body {
 
 @media (max-width: 768px) {
   .hero-logo {
-    width: 300px;
+    width: 280px;
   }
   .project-subheader {
     font-size: 1.2rem;
@@ -147,7 +148,7 @@ body {
 
 @media (max-width: 480px) {
   .hero-logo {
-    width: 200px;
+    width: 180px;
   }
   .project-subheader {
     font-size: 1rem;
