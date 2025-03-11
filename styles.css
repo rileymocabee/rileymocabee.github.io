@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
   text-align: center;
   position: relative;
+  user-select: none;
 }
 
 .hero {
@@ -27,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  pointer-events: none;
 }
 
 .hero::before {
@@ -45,6 +47,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  pointer-events: auto;
 }
 
 .hero-logo {
@@ -132,6 +135,10 @@ body {
 .fade-in-active {
   opacity: 1;
   transform: translateY(0);
+}
+
+img {
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
