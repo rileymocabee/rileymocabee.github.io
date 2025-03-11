@@ -4,11 +4,7 @@
   <meta charset="UTF-8">
   <title>Beach Runner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -19,6 +15,12 @@
     <div class="hero-content">
       <img src="images/logo.png" alt="Beach Runner Logo" class="hero-logo">
       <h2 class="project-subheader">New Project Coming Soon</h2>
+
+      <!-- Enhanced Email Signup -->
+      <form id="emailForm" class="email-form">
+        <input type="email" id="email" placeholder="Your Email" required>
+        <button type="submit">Join List</button>
+      </form>
     </div>
   </section>
 
@@ -30,10 +32,40 @@
     <a href="https://tiktok.com/@beachrunnersd" target="_blank"><i class="fab fa-tiktok"></i></a>
   </div>
 
-  <!-- Main content -->
   <main></main>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
+
+  <!-- Google Forms submission integration -->
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const formURL = 'https://docs.google.com/forms/d/1dm1j2L6jPRqSCde2vRtSUNPxdVq2-kr6lZoAAHAWMAM/formResponse';
+
+      const formData = new FormData();
+      formData.append('entry.748925423', email);
+
+      fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      })
+      .then(() => {
+        alert('Thank you for subscribing!');
+        document.getElementById('emailForm').reset();
+      })
+      .catch((error) => {
+        alert('Submission failed, please try again.');
+        console.error(error);
+      });
+    });
+  </script>
+
+  <main></main>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
